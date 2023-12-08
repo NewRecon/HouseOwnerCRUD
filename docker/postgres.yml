@@ -1,0 +1,13 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres:16.1
+    environment:
+      POSTGRES_USER: '${DBProject_user}'
+      POSTGRES_PASSWORD: '${DBProject_password}'
+      POSTGRES_DB: '${DBProject_DBName}'
+    ports:
+      - '${DBProject_port}:5432'
